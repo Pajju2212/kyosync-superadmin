@@ -1,0 +1,200 @@
+.dash {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+
+    .title {
+        color: #000;
+        font-family: SF Pro;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 550;
+        line-height: normal;
+    }
+
+    .content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        .chart-container {
+            display: flex;
+            gap: 16px;
+            width: 100%;
+            overflow-y: auto;
+            padding: 60px;
+            margin: -60px;
+
+            &::-webkit-scrollbar {
+                display: none !important;
+            }
+
+            touch-action: pan-y;
+
+            .chart {
+
+                aspect-ratio: 2.26;
+                width: 100%;
+                min-width: 407px;
+                border-radius: 25px;
+                background: var(--Kyo-White, #FFF);
+                box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.10);
+                padding-inline: 37px;
+                padding-block: 27px;
+                gap: 8px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .top {
+                    display: flex;
+                    gap: 2.94%;
+
+                    h2 {
+                        color: rgba(0, 0, 0, 0.10);
+                        text-align: center;
+                        leading-trim: both;
+                        text-edge: cap;
+                        font-feature-settings: 'clig' off, 'liga' off;
+                        font-family: SF Pro;
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 590;
+                        line-height: 32.083px;
+                        /* 133.681% */
+                        letter-spacing: -0.583px;
+                    }
+                }
+
+                .bottom {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-end;
+
+                    .left {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 8px;
+
+                        .top {
+                            color: rgba(0, 0, 0, 0.10);
+                            font-feature-settings: 'clig' off, 'liga' off;
+
+                            /* Large Title/Emphasized */
+                            font-family: SF Pro;
+                            font-size: 34px;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: 41px;
+                            /* 120.588% */
+                            letter-spacing: -0.4px;
+                        }
+
+                        .bottom {
+                            display: flex;
+                            align-items: center;
+                            gap: 3px;
+                            width: min-content;
+                            color: rgba(0, 0, 0, 0.10);
+                            font-feature-settings: 'clig' off, 'liga' off;
+
+                            /* Body/Regular */
+                            font-family: SF Pro;
+                            font-size: 17px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 22px;
+                            /* 129.412% */
+                            letter-spacing: -0.4px;
+                        }
+                    }
+
+                    .right {}
+                }
+            }
+
+            .add-more{
+                &{
+                    justify-content: center;
+                    align-items: center;
+                }
+                .circle{
+                    display: flex;
+width: 83px;
+height: 83px;
+padding: 16px 16px 17px 17px;
+justify-content: center;
+align-items: center;
+flex-shrink: 0;
+border-radius: 49px;
+border: 2px solid #AFAFAF;
+                }
+            }
+        }
+
+        .filter-container {
+            display: flex;
+            gap: 20px;
+            button.active{
+                border-radius: 15px;
+                border: 1px solid var(--KyoSync-Blue, #007AFF) !important;
+                background: var(--KyoSync-Blue, #007AFF) !important;
+                color: var(--Kyo-White, #FFF) !important;
+                font-family: SF Pro;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 590;
+                line-height: 22px; /* 122.222% */
+                letter-spacing: -0.4px;
+            }
+            button:not(.filter) {
+                color: #000;
+                leading-trim: both;
+                text-edge: cap;
+                font-feature-settings: 'clig' off, 'liga' off;
+                font-family: SF Pro;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 590;
+                line-height: 22px;
+                /* 122.222% */
+                letter-spacing: -0.4px;
+                border-radius: 15px;
+                border: 1px solid var(--grays-gray-4, #D1D1D6);
+                background: var(--Kyo-White, #FFF);
+                display: flex;
+                height: 52px;
+                padding-inline: 58px;
+                align-items: center;
+            }
+
+            .filter {
+                border-radius: 15px;
+                border: 1px solid var(--KyoSync-Blue, #007AFF);
+                background: var(--KyoSync-Blue, #007AFF);
+                padding: 14px;
+            }
+
+        }
+
+        .space-container {
+            display: flex;
+            width: 100%;
+            gap: 16px;
+
+            .space {
+                width: 100%;
+                aspect-ratio: 1.68;
+                max-width: 830px;
+                border-radius: 25px;
+                background: var(--Kyo-White, #FFF);
+
+                /* Card */
+                box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.10);
+            }
+        }
+    }
+}

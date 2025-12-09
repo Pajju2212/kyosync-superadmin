@@ -1,0 +1,69 @@
+/* Changed .adminManage to .payManage to match your JS className */
+.payManage { 
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+    .title-container {
+        border-bottom: 1px solid var(--KyoSync-Blue, #007AFF);
+        h1 {
+            color: #000;
+            font-family: SF Pro, sans-serif;
+            font-size: 40px;
+            font-weight: 510;
+            margin-bottom: 24px;
+        }
+    }
+
+    .table-container {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        width: 100%;
+
+        .filter-row {
+            align-items: flex-end;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+
+            .selected-number {
+                display: flex;
+                gap: 20px;
+                .show-data {
+                    color: #000;
+                    font-family: SF Pro, sans-serif;
+                    font-size: 16px;
+                    font-weight: 590;
+                    span { color: #007AFF; }
+                }
+            }
+
+            .filter-inputs {
+                display: flex;
+                gap: 16px;
+                input {
+                    width: 400px;
+                    padding: 14px 20px;
+                    border-radius: 12px;
+                    border: 1px solid #D1D1D6;
+                }
+            }
+            
+            /* ... Include the rest of your filter/options styles here ... */
+            .options {
+               /* Paste the rest of your adminManagement options styles here */
+               background: #fff;
+               position: absolute;
+               top: 100%;
+               right: 0;
+               z-index: 100;
+               border: 1px solid #eee;
+               padding: 20px;
+               display: none;
+               &.active { display: flex; flex-direction: column; gap: 10px;}
+            }
+        }
+    }
+}

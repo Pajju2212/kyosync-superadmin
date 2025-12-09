@@ -1,0 +1,10 @@
+{
+    "loginPage":{
+        "title":"Hi Administrator",
+        "idPlaceholder":"Admin ID",
+        "passwordPlaceholder":"Admin Password",
+        "rememberMe":"Remember me",
+        "forgotPassword":"Forgot Password?",
+        "signIn":"Sign In"
+    }
+}

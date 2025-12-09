@@ -1,0 +1,139 @@
+.header {
+    border-bottom: 1px solid var(--grays-gray-5, #E5E5EA);
+    background: var(--Kyo-White, #FFF);
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    padding-inline: 38px;
+    padding-block: 14px;
+    align-items: center;
+    position: relative;
+
+    .active {
+        right: 0 !important;
+    }
+
+    .notification-icon {
+        svg path {
+            transition: all 500ms ease;
+        }
+
+        cursor: pointer;
+    }
+
+
+    .notification-panel {
+        transition: all 500ms ease;
+        width: 372px;
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        margin-top: 1px;
+        height: calc(100vh - 80px);
+        border-left: 1px solid var(--grays-gray-5, #E5E5EA);
+        background: rgba(250, 250, 250, 0.50);
+        z-index: 10000;
+        /* Material Blur */
+        backdrop-filter: blur(25px);
+
+        .head {
+            border-bottom: 1px solid var(--grays-gray-5, #E5E5EA);
+            height: 72px;
+            display: flex;
+            padding-inline: 24px;
+            justify-content: flex-end;
+            align-items: center;
+            color: #000;
+            leading-trim: both;
+            text-edge: cap;
+            font-family: SF Pro;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 590;
+            line-height: normal;
+            gap: 12px;
+
+        }
+
+        .body {
+            display: flex;
+            flex-direction: column;
+            overflow-y: scroll;
+            height: calc(100% - 72px);
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            .request-item {
+                padding-inline: 24px;
+                padding-block: 24px;
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+                background: var(--Kyo-White, #FFF);
+                border-bottom: 1px solid var(--grays-gray-5, #E5E5EA);
+
+                .top {
+                    display: flex;
+                    justify-content: space-between;
+
+                    h3 {
+                        color: var(--KyoSync-Black, #000);
+                        leading-trim: both;
+                        text-edge: cap;
+                        font-family: SF Pro;
+                        font-size: 18px;
+                        font-style: normal;
+                        font-weight: 590;
+                        line-height: normal;
+                    }
+                }
+
+                .bottom {
+                    display: flex;
+                    justify-content: space-between;
+
+                    .details {
+                        .name {
+                            color: var(--KyoSync-Black, #000);
+                            font-family: SF Pro;
+                            font-size: 18px;
+                            font-style: normal;
+                            font-weight: 590;
+                            line-height: normal;
+                        }
+
+                        .location {
+                            color: var(--KyoSync-Black, #000);
+                            font-family: SF Pro;
+                            font-size: 18px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: normal;
+                        }
+                    }
+
+                    button {
+                        color: var(--KyoSync-White, var(--Kyo-White, #FFF));
+                        font-feature-settings: 'clig' off, 'liga' off;
+                        font-family: SF Pro;
+                        font-size: 18px;
+                        font-style: normal;
+                        font-weight: 590;
+                        line-height: 22px;
+                        /* 122.222% */
+                        letter-spacing: -0.4px;
+                        border-radius: 12px;
+                        border: 1px solid var(--KyoSync-Blue, #007AFF);
+                        background: var(--KyoSync-Blue, #007AFF);
+                        display: inline-flex;
+                        padding: 10px 37px 9px 37px;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+    }
+}

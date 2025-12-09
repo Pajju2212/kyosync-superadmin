@@ -1,0 +1,168 @@
+.ant-modal-content {
+    width: max-content;
+}
+
+.payment-details {
+    display: flex;
+    // aspect-ratio: 2.00;
+    width: 100%;
+    // max-width: 970px;
+    padding: 40px;
+
+    .left {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        padding-right: 40px;
+
+        .title {
+            color: #000;
+            font-family: SF Pro;
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 510;
+            line-height: normal;
+        }
+
+        .date-input {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            color: #000;
+            leading-trim: both;
+            text-edge: cap;
+            font-feature-settings: 'clig' off, 'liga' off;
+            font-family: SF Pro;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 590;
+            line-height: 22px;
+            /* 122.222% */
+            letter-spacing: -0.4px;
+
+            .date {
+                border-radius: 15px;
+                border: 1px solid var(--grays-gray-4, #D1D1D6);
+                background: #FFF;
+                padding-inline: 40px;
+                padding-block: 20px;
+
+            }
+
+            .today {
+                border-radius: 15px;
+                border: 1px solid var(--grays-gray-4, #D1D1D6);
+                background: #FFF;
+                padding-inline: 40px;
+                padding-block: 20px;
+
+            }
+        }
+
+        .table {
+            height:450px;
+            overflow-y: auto;
+            border: 1px solid var(--grays-gray-4, #D1D1D6);
+            border-radius: 8px;
+        }
+    }
+
+    .right {
+        padding-left: 40px;
+        border-left: 2px solid #E5E5EA;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        // gap:100px;/
+        .top-top {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+
+            .title {
+                margin-bottom: 24px;
+                color: #000;
+                font-feature-settings: 'clig' off, 'liga' off;
+
+                /* Title1/Emphasized */
+                font-family: SF Pro;
+                font-size: 28px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 34px;
+                /* 121.429% */
+                letter-spacing: -0.4px;
+            }
+
+            .item {
+                color: #000;
+                font-feature-settings: 'clig' off, 'liga' off;
+
+                /* Title2/Regular */
+                font-family: SF Pro;
+                font-size: 22px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 28px;
+                /* 127.273% */
+                letter-spacing: -0.4px;
+                margin-bottom: 8px;
+
+                span {
+                    color: #000;
+                    font-feature-settings: 'clig' off, 'liga' off;
+
+                    /* Title2/Emphasized */
+                    font-family: SF Pro;
+                    font-size: 22px;
+                    font-style: normal;
+                    font-weight: 700 !important;
+                    line-height: 28px;
+                    letter-spacing: -0.4px;
+                }
+            }
+
+            .top {}
+
+            .mid {}
+
+
+        }
+
+        .bottom {
+            
+            .msg {
+                margin-bottom: 24px;
+                color: var(--colors-red, #FF3B30);
+                font-feature-settings: 'clig' off, 'liga' off;
+
+                /* Title2/Regular */
+                font-family: SF Pro;
+                font-size: 22px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 28px;
+                /* 127.273% */
+                letter-spacing: -0.4px;
+            }
+
+            .transfer {
+                border-radius: 14px;
+                border: 1px solid #D1D1D1;
+                background: #007AFF;
+                display: flex;
+                padding: 20px 143px 20px 144px;
+                justify-content: center;
+                align-items: center;
+                color: #FFF;
+                font-family: SF Pro;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 590;
+                line-height: normal;
+            }
+        }
+
+    }
+
+}

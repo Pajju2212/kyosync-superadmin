@@ -1,33 +1,28 @@
-import React from "react";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import LoginPage from "./pages/LoginPage/LoginPage";
-import DashboardPage from "./pages/DashboardPage/DashboardPage";
-import UsersPage from "./pages/UsersPage/UsersPage";
-import PaymentsPage from "./pages/PaymentsPage/PaymentsPage";
-import SettingsPage from "./pages/SettingsPage/SettingsPage";
-
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import React from 'react';
+import { Routes, Route, Navigate } from 'react-router-dom';
+import Layout from './Layout';
+import RequireAuth from './components/RequireAuth';
+import Login from './pages/LoginPage/LoginPage'; // OR './pages/login' if you put index.js there
+import Home from './pages/home';
 
 function App() {
   return (
-    <BrowserRouter>
-      <ToastContainer position="top-right" autoClose={2000} theme="light" />
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        {/* Public Route */}
+        <Route path="login" element={<Login />} />
+        
+        {/* Protected Routes */}
+        <Route element={<RequireAuth />}>
+           {/* Redirect root to dashboard */}
+           <Route path="/" element={<Navigate to="/dashboard" replace />} />
+           <Route path="dashboard" element={<Home />} />
+        </Route>
 
-      <Routes>
-        {/* Login */}
-        <Route path="/" element={<LoginPage />} />
-
-        {/* Main sections */}
-        <Route path="/dashboard" element={<DashboardPage />} />
-        <Route path="/admin-management" element={<UsersPage />} />
-        <Route path="/payment-management" element={<PaymentsPage />} />
-        <Route path="/settings" element={<SettingsPage />} />
-
-        {/* Fallback */}
-        <Route path="*" element={<Navigate to="/dashboard" replace />} />
-      </Routes>
-    </BrowserRouter>
+        {/* Catch all */}
+        <Route path="*" element={<Navigate to="/login" replace />} />
+      </Route>
+    </Routes>
   );
 }
 

@@ -1,0 +1,27 @@
+.sidebar {
+    border-right: 1px solid var(--grays-gray-5, #E5E5EA);
+    background: var(--Kyo-White, #FFF);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    gap:30px ;
+    padding-top: 60px;
+    .item {
+        display: flex;
+        padding: 15px;
+        align-items: center;
+        gap: 10px;
+        transition: all 500ms ease;
+
+        
+    }
+    .item:focus{
+        border: none;
+        outline: none;
+    }
+    .active{
+        border-radius: 15px;
+background: var(--KyoSync-Yellow, #FFD600);
+    }
+}

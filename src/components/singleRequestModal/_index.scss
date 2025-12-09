@@ -1,0 +1,157 @@
+.ant-modal-content {
+    width: max-content;
+}
+
+.request-modal {
+    display: flex;
+    flex-direction: column;
+    // aspect-ratio: 2.00;
+    width: 100%;
+    // max-width: 970px;
+    padding: 50px;
+    gap: 24px;
+
+    .head {
+        display: flex;
+        justify-content: space-between;
+
+        h1 {
+            color: #000;
+            font-family: SF Pro;
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 510;
+            line-height: 24px;
+            /* 60% */
+        }
+    }
+
+    .body {
+        display: flex;
+        gap: 40px;
+
+        .left {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+
+            .image {
+                max-width: 200px;
+                border: 1px solid var(--grays-gray-2, #AEAEB2);
+                background: lightgray 50% / cover no-repeat;
+            }
+
+            h3 {
+                color: #000;
+                font-family: SF Pro;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 510;
+                line-height: 24px;
+                /* 133.333% */
+                text-align: center;
+            }
+        }
+
+        .right {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .top {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+
+                .data-items {
+                    display: flex;
+
+                    color: #000;
+                    font-family: SF Pro;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 24px;
+                    gap: 8px;
+                    /* 133.333% */
+                    .title {
+                        font-weight: bold;
+                    }
+                }
+                .approved{
+                    color:#34C759 ;
+                }
+                .pending{
+                    color: #FFD600;
+                }
+                .declined{
+                    color: red;
+                }
+            }
+
+            .bottom {
+                display: flex;
+                justify-content: space-between;
+                gap: 84px;
+                .download-btn {
+                    display: flex;
+                    padding: 18px 31px 19px 33px;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 15px;
+                    background: var(--KyoSync-Blue, #007AFF);
+                    color: var(--Kyo-White, #FFF);
+                    font-family: SF Pro;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 510;
+                    line-height: 24px;
+                    width: max-content;
+                    /* 133.333% */
+                }
+
+                .action-cont {
+                    display: flex;
+                    gap: 16px;
+                    flex: 1;
+                    justify-content: flex-end;
+
+                    .decline {
+                        display: flex;
+                        width: max-content;
+                        padding: 18px 29px 19px 31px;
+                        justify-content: center;
+                        align-items: center;
+                        color: var(--KyoSync-Blue, #007AFF);
+                        font-family: SF Pro;
+                        font-size: 18px;
+                        font-style: normal;
+                        font-weight: 510;
+                        line-height: 24px;
+                        /* 133.333% */
+                        border-radius: 15px;
+                        border: 1px solid var(--KyoSync-Blue, #007AFF);
+                        overflow: hidden;
+                    }
+
+                    .accept {
+                        display: flex;
+                        width: max-content;
+                        padding: 18px 31px 19px 33px;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 15px;
+                        background: var(--KyoSync-Blue, #007AFF);
+                        color: var(--Kyo-White, #FFF);
+                        font-family: SF Pro;
+                        font-size: 18px;
+                        font-style: normal;
+                        font-weight: 510;
+                        line-height: 24px;
+                        /* 133.333% */
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+    }
+}

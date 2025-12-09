@@ -1,0 +1,127 @@
+/* src/pages/LoginPage/LoginPage.scss */
+.login-page {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    font-family: "SF Pro", sans-serif;
+
+    .left {
+        flex: 55; /* Matches 55% width */
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+
+        .logo-container {
+            width: 413px; /* Fixed width from Figma */
+            img { width: 100%; height: auto; }
+        }
+    }
+
+    .right {
+        flex: 45; /* Matches 45% width */
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #FAFAFA;
+        position: relative;
+
+       .language-selector {
+            cursor: pointer;
+            position: absolute;
+            right: 40px;
+            top: 40px;
+
+            /* === EXACT FIGMA MEASUREMENTS === */
+            width: 63.31px;
+            height: 67.6px;
+            
+            /* Use Flexbox to center the text perfectly inside the fixed box */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0; /* Reset padding since we are using fixed width/height */
+
+            /* Visual Styles */
+            background: #FFE500;
+            border: 1px solid rgba(127, 127, 127, 0.5);
+            border-radius: 12px;
+            
+            /* Font Settings */
+            font-family: "SF Pro", sans-serif;
+            font-size: 28px;
+            font-weight: 600;
+            color: #000;
+        }
+        .form {
+            width: 480px; /* Fixed width for the card */
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+
+            h1 {
+                font-size: 48px;
+                font-weight: 600;
+                color: #0F0F0F;
+                margin-bottom: 20px;
+            }
+
+            input {
+                width: 100%;
+                height: 58px;
+                padding: 0 29px; /* Left/Right padding */
+                border-radius: 14px;
+                border: 1px solid #D1D1D1;
+                font-size: 20px;
+                box-sizing: border-box; /* IMPORTANT: Keeps width at 480px including padding */
+                
+                &::placeholder { color: #BEBEBE; }
+            }
+
+            .additional-input {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 20px; /* Space before button */
+
+                .remember-me {
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                    font-size: 18px;
+                    font-weight: 500;
+                    
+                    input { 
+                        width: 20px; 
+                        height: 20px; 
+                        margin: 0; /* Reset default margin */
+                    }
+                }
+            }
+
+            /* === BUTTON FIX === */
+            .login-btn {
+                width: 100%;      /* Fills the 480px container */
+                height: 64px;     /* Exact Figma height */
+                background: #007AFF;
+                color: white;
+                border: none;
+                border-radius: 14px;
+                font-size: 20px;
+                font-weight: 600;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: background 0.2s;
+
+                &:hover {
+                    background: #0062c4;
+                }
+            }
+        }
+    }
+}
